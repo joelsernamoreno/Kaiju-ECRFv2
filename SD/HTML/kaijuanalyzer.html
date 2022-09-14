@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>Kaiju Analyzer</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="lib.js"></script> 
+</head>
+<body>
+<body>
+<nav id='menu'>
+  <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+  <ul>
+    <li><a href='/'>Home</a></li>
+    <li><a class='dropdown-arrow'>Config</a>
+      <ul class='sub-menus'>
+        <li><a href='/txbinary'>Binary TX Config</a></li>
+        <li><a href='/rxconfig'>RX Config</a></li>
+      </ul>
+    </li>
+    <li><a class='dropdown-arrow'>RX Log</a>
+      <ul class='sub-menus'>
+        <li><a href='/viewlog'>RX Logs</a></li>
+        <li><a href='/delete'>Delete Logs</a></li>
+        <li><a href='/downloadlog'>Download Logs</a></li>
+        <li><a href='/cleanspiffs'>Clean SPIFFS</a></li>
+      </ul>
+    </li>
+    <li><a class='dropdown-arrow'>Kaiju</a>
+      <ul class='sub-menus'>
+        <li><a href='/kaijulogin'>Login</a></li>
+        <li><a href='/kaijuanalyzer'>Analyzer</a></li>
+        <li><a href='/kaijugenerator'>Generator</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<br>
+<FORM action="/setkaijuanalyzer" method="post" id="config" target="iframe">
+    <p>Binary: </p><textarea class="css-input-text" form="config" rows="1" cols="50" name="binary"></textarea>
+    <hr>
+    <INPUT type="radio" name="configmodule" value="1" hidden="1" checked="checked">
+    <INPUT class="button-submit" type="submit" value="Start">
+</form>
+<br>
+<hr>
+<br>
+<iframe style="visibility: hidden;" src="http://" )+local_IPstr+"/setkaijuanalyzer" name="iframe"></iframe>
+</body>
+</html>
